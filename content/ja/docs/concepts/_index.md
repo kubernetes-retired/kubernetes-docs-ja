@@ -38,9 +38,9 @@ Kubernetesはシステムの状態を表現するため、デプロイされた�
 
 ## Kubernetes Control Plane
 
-The various parts of the Kubernetes Control Plane, such as the Kubernetes Master and kubelet processes, govern how Kubernetes communicates with your cluster. The Control Plane maintains a record of all of the Kubernetes Objects in the system, and runs continuous control loops to manage those objects' state. At any given time, the Control Plane's control loops will respond to changes in the cluster and work to make the actual state of all the objects in the system match the desired state that you provided.
+Kubernetes Masterやkubeletプロセスなどのような、Kubernetes Control Planeは、Kubernetesがどのようにクラスタと通信を行うかを制御します。Control Planeはシステム中のすべてのKubernetesオブジェクトに関するレコードを保守し、オブジェクトの状態を管理するために継続的な管理ループを実行します。任意の時点で、Control Planeの制御ループはクラスタ内の変更に応答し、システム内のすべてのオブジェクトの状態を、目的の状態と一致させるように動作します。
 
-For example, when you use the Kubernetes API to create a Deployment object, you provide a new desired state for the system. The Kubernetes Control Plane records that object creation, and carries out your instructions by starting the required applications and scheduling them to cluster nodes--thus making the cluster's actual state match the desired state.
+例えば、Deploymentオブジェクトを作成するためには、Kubernetes APIを使用してシステムの新しい目的状態を提供します。Kubernetes Control Planeはオブジェクトの作成を記録し、必要なアプリケーションを起動してクラスタノードにスケジューリングすることでクラスタの状態を目的の状態に一致させます。
 
 ### Kubernetes Master
 
