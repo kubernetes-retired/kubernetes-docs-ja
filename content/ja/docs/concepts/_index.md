@@ -60,6 +60,5 @@ The nodes in a cluster are the machines (VMs, physical servers, etc) that run yo
 
 ### What's next
 
-If you would like to write a concept page, see
-[Using Page Templates](/docs/home/contribute/page-templates/)
-for information about the concept page type and the concept template.
+コンセプトページを書きたい場合、コンセプトページとコンセプトテンプレートの情報を得るため、
+[Using Page Templates](/docs/home/contribute/page-templates/)を見てください。
