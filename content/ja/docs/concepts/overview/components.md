@@ -1,25 +1,22 @@
 ---
 reviewers:
 - lavalamp
-title: Kubernetes Components
+title: Kubernetesコンポーネント
 content_template: templates/concept
 ---
 
 {{% capture overview %}}
-This document outlines the various binary components needed to
-deliver a functioning Kubernetes cluster.
+このドキュメントでは、動作するKubernetes clusterに必要なバイナリコンポーネントについて説明します。
 {{% /capture %}}
 
 {{% capture body %}}
-## Master Components
+## Masterコンポーネント
 
-Master components provide the cluster's control plane. Master components make global decisions about the
-cluster (for example, scheduling), and detecting and responding to cluster events (starting up a new pod when a replication controller's 'replicas' field is unsatisfied).
+MasterコンポーネントはクラスタのControl Planeを提供します。Masterコンポーネントはクラスタについての全体的な決定(スケジューリング)を行ったり、クラスタのイベント(replication controllerの'replicas'フィールドが充足されていないときに新しいポッドを作成する等)を検知し、対応したりします。
 
-Master components can be run on any machine in the cluster. However,
-for simplicity, set up scripts typically start all master components on
-the same machine, and do not run user containers on this machine. See
-[Building High-Availability Clusters](/docs/admin/high-availability/) for an example multi-master-VM setup.
+Masterコンポーネントはクラスタ内のいずれのマシンでも実行可能です。
+しかし、単純化のために、セットアップスクリプトは通常、すべてのマスターコンポーネントを同じマシン上で実行し、そのマシン上ではユーザのコンテナを実行しません。
+マルチマスターVMの例を構成するために、[Building High-Availability Clusters](/docs/admin/high-availability/)を見てください。
 
 ### kube-apiserver
 
@@ -37,19 +34,18 @@ the same machine, and do not run user containers on this machine. See
 
 {{< glossary_definition term_id="kube-controller-manager" length="all" >}}
 
-These controllers include:
+以下のコンポーネントを含みます:
 
-  * Node Controller: Responsible for noticing and responding when nodes go down.
-  * Replication Controller: Responsible for maintaining the correct number of pods for every replication
-  controller object in the system.
-  * Endpoints Controller: Populates the Endpoints object (that is, joins Services & Pods).
-  * Service Account & Token Controllers: Create default accounts and API access tokens for new namespaces.
+  * Node Controller: ノードがダウンしたときに検知し、対応する責務があります。
+  * Replication Controller: システム上のすべてのreplication controllerオブジェクトで正しい数のpodを維持する責務があります。
+  * Endpoints Controller:　Endpointsオブジェクトを生成します(つまり、ServiceとPodを結合します)。
+  * Service Account & Token Controllers: 新しいnamespaceのための既定のアカウントとAPIアクセストークンを作成します。
 
 ### cloud-controller-manager
 
-[cloud-controller-manager](/docs/tasks/administer-cluster/running-cloud-controller/) runs controllers that interact with the underlying cloud providers. The cloud-controller-manager binary is an alpha feature introduced in Kubernetes release 1.6.
+[cloud-controller-manager](/docs/tasks/administer-cluster/running-cloud-controller/)は、基盤となるクラウドプロバイダーと対話するコントローラを実行します。cloud-controller-managerはKubernetes 1.6ではアルファ機能です。
 
-cloud-controller-manager runs cloud-provider-specific controller loops only. You must disable these controller loops in the kube-controller-manager. You can disable the controller loops by setting the `--cloud-provider` flag to `external` when starting the kube-controller-manager.
+cloud-controller-managerはcloud-provider特有の制御ループのみ実行します。kube-controller-managerにおけるこれらの制御ループは無効化する必要があります。無効化するには、kube-controller-managerを起動する際に、`--cloud-provider`フラグを`external`に設定します。
 
 cloud-controller-manager allows cloud vendors code and the Kubernetes core to evolve independent of each other. In prior releases, the core Kubernetes code was dependent upon cloud-provider-specific code for functionality. In future releases, code specific to cloud vendors should be maintained by the cloud vendor themselves, and linked to cloud-controller-manager while running Kubernetes.
 
@@ -60,9 +56,9 @@ The following controllers have cloud provider dependencies:
   * Service Controller: For creating, updating and deleting cloud provider load balancers
   * Volume Controller: For creating, attaching, and mounting volumes, and interacting with the cloud provider to orchestrate volumes
 
-## Node Components
+## Nodeコンポーネント
 
-Node components run on every node, maintaining running pods and providing the Kubernetes runtime environment.
+Nodeコンポーネントはすべてのノードで動作し、podの実行とKubernetes実行環境の提供を維持します。
 
 ### kubelet
 
@@ -108,5 +104,3 @@ A [Cluster-level logging](/docs/concepts/cluster-administration/logging/) mechan
 saving container logs to a central log store with search/browsing interface.
 
 {{% /capture %}}
-
-
