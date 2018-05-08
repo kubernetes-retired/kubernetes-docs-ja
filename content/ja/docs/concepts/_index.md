@@ -17,18 +17,18 @@ Kubernetesで作業をするためには、 *Kubernetes APIオブジェクト*�
   * **[kubelet](/docs/admin/kubelet/)**は、マスターノードと通信をします。
   * **[kube-proxy](/docs/admin/kube-proxy/)**は,各ノード上のKubernetesネットワーキングサービス実現するネットワークプロキシです。
 
-## Kubernetes Objects
+## Kubernetesオブジェクト
 
-Kubernetes contains a number of abstractions that represent the state of your system: deployed containerized applications and workloads, their associated network and disk resources, and other information about what your cluster is doing. These abstractions are represented by objects in the Kubernetes API; see the [Kubernetes Objects overview](/docs/concepts/abstractions/overview/) for more details.
+Kubernetesはシステムの状態を表現するため、デプロイされたコンテナアプリケーションやワークロード、それらに紐付けられたネットワークやディスクリソース、その他クラスタが何をしているかについての情報など、多くの抽象化を含んでいます。これらの抽象概念はKubernetes APIのオブジェクトで表現されます。詳細は[Kubernetes Objects overview](/docs/concepts/abstractions/overview/)を見てください。
 
-The basic Kubernetes objects include:
+基本的なKubernetesオブジェクトは以下のものを含みます:
 
 * [Pod](/docs/concepts/workloads/pods/pod-overview/)
 * [Service](/docs/concepts/services-networking/service/)
 * [Volume](/docs/concepts/storage/volumes/)
 * [Namespace](/docs/concepts/overview/working-with-objects/namespaces/)
 
-In addition, Kubernetes contains a number of higher-level abstractions called Controllers. Controllers build upon the basic objects, and provide additional functionality and convenience features. They include:
+加えて、Kubernetesはコントローラと呼ばれる、高度な抽象概念を持っています。コントーらは基本オブジェクトの上に構築され、追加の機能性や利便性を提供します。これらは、次のものを含みます:
 
 * [ReplicaSet](/docs/concepts/workloads/controllers/replicaset/)
 * [Deployment](/docs/concepts/workloads/controllers/deployment/)
