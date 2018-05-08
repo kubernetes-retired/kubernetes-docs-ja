@@ -1,5 +1,4 @@
 ---
-title: "Extending the Kubernetes API"
+title: "Kubernetes APIを拡張する"
 weight: 20
 ---
-
