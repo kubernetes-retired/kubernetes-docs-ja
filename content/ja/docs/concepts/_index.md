@@ -44,13 +44,13 @@ Kubernetes Masterやkubeletプロセスなどのような、Kubernetes Control P
 
 ### Kubernetes Master
 
-The Kubernetes master is responsible for maintaining the desired state for your cluster. When you interact with Kubernetes, such as by using the `kubectl` command-line interface, you're communicating with your cluster's Kubernetes master.
+Kubernetes masterはクラスタの目的の状態を維持する責務を負います。 `kubectl`コマンドラインインターフェースを使うなどしてKubernetesと通信を行ったとき、あなたはクラスタのKubernetes masterと通信をしています。
 
-> The "master" refers to a collection of processes managing the cluster state.  Typically these processes are all run on a single node in the cluster, and this node is also referred to as the master. The master can also be replicated for availability and redundancy.
+> 「マスター」とは、クラスタの状態を管理するプロセスの集合を指します。通常、これらのプロセスはすべて、クラスタ内の単一ノード上で実行され、このノードそのもののこともマスターと呼びます。マスターは可用性と冗長性のために複製することも出来ます。
 
 ### Kubernetes Nodes
 
-The nodes in a cluster are the machines (VMs, physical servers, etc) that run your applications and cloud workflows. The Kubernetes master controls each node; you'll rarely interact with nodes directly.
+クラスタのノードはアプリケーションやクラウドワークフローを実行するマシン(VMや物理マシンなど)です。Kubernetes masterはそれぞれのノードを制御します。つまり、あなたがノードと直接対話することはほとんどありません。
 
 #### Object Metadata
 
