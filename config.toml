@@ -37,7 +37,7 @@ section = [ "HTML"]
 
 [outputFormats]
 [outputFormats.RSS]
-baseName = "feed"	
+baseName = "feed"
 
 [params]
 
@@ -108,4 +108,9 @@ languageName ="Chinese"
 weight = 2
 contentDir = "content/cn"
 
-
+[languages.ja]
+title = "Kubernetes"
+description = "Production-Grade Container Orchestration"
+languageName = "Japanese"
+weight = 2
+contentDir = "content/ja"
