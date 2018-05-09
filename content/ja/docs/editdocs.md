@@ -1,6 +1,6 @@
 ---
 layout: docwithnav
-title: Contributing to the Kubernetes Documentation
+title: Kubernetesドキュメントへのコントリビューション
 ---
 
 <!-- BEGIN: Gotta keep this section JS/HTML because it swaps out content dynamically -->
@@ -23,15 +23,15 @@ $( document ).ready(function() {
 </script>
 <div id="continueEdit">
 
-<h2>Continue your edit</h2>
+<h2>編集を続ける</h2>
 
-<p><b>To make changes to the document, do the following:</b></p>
+<p><b>ドキュメントの編集を続けるには、次の様にしてください:</b></p>
 
 <ol>
-<li>Click the button below to edit the page you were just on.</li>
-<li>Click <b>Commit Changes</b> at the bottom of the screen to create a copy of our site in your GitHub account called a <i>fork</i>.</li>
-<li>You can make other changes in your fork after it is created, if you want.</li>
-<li>On the index page, click <b>New Pull Request</b> to let us know about it.</li>
+<li>現在のページを編集するには、以下にあるボタンをクリックします。</li>
+<li>あなたのGitHubアカウントに<i>fork</i>と呼ばれる、このサイトのコピーを作成するために、画面下部の<b>Commit Changes</b>ボタンをクリックします。</li>
+<li>forkが作成されたら、forkに対して変更を加えることが出来ます。</li>
+<li>変更について通知するために、インデックスページで<b>New Pull Request</b>ボタンをクリックします。</li>
 </ol>
 
 <p><a id="continueEditButton" class="button"></a></p>
@@ -40,18 +40,18 @@ $( document ).ready(function() {
 </div>
 <div id="generalInstructions">
 
-<h2>Edit our site in the cloud</h2>
+<h2>クラウド上でサイトを編集する</h2>
 
-<p>Click the button below to visit the repo for our site. You can then click the <b>Fork</b> button in the upper-right area of the screen to create a copy of our site in your GitHub account called a <i>fork</i>. Make any changes you want in your fork, and when you are ready to send those changes to us, go to the index page for your fork and click <b>New Pull Request</b> to let us know about it.</p>
+<p>このサイトのリポジトリにアクセスするためには、下記のボタンをクリックしてください。画面の右上の<b>Fork</b>ボタンを押すと、<i>fork</i>と呼ばれる、リポジトリのコピーをあなたのGitHubアカウントに作ることが出来ます。あなたのforkに変更を加え、それらの変更を私たちに送る準備が出来たら、forkのインデックスページに移動して、<b>New Pull Request</b>ボタンを押してください。</p>
 
-<p><a class="button" href="https://github.com/kubernetes/website/">Browse this site's source code</a></p>
+<p><a class="button" href="https://github.com/kubernetes/website/">このサイトのソースコードを表示する</a></p>
 
 </div>
 <!-- END: Dynamic section -->
 
 <br/>
 
-For more information about contributing to the Kubernetes documentation, see:
+Kubernetesのドキュメントへコントリビュートすることについて詳細を知りたい場合、次のページを見てください:
 
 * [Creating a Documentation Pull Request](/docs/home/contribute/create-pull-request/)
 * [Writing a New Topic](/docs/home/contribute/write-new-topic/)
