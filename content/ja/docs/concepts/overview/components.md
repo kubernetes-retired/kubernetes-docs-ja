@@ -47,14 +47,14 @@ Masterコンポーネントはクラスタ内のいずれのマシンでも実�
 
 cloud-controller-managerはcloud-provider特有の制御ループのみ実行します。kube-controller-managerにおけるこれらの制御ループは無効化する必要があります。無効化するには、kube-controller-managerを起動する際に、`--cloud-provider`フラグを`external`に設定します。
 
-cloud-controller-manager allows cloud vendors code and the Kubernetes core to evolve independent of each other. In prior releases, the core Kubernetes code was dependent upon cloud-provider-specific code for functionality. In future releases, code specific to cloud vendors should be maintained by the cloud vendor themselves, and linked to cloud-controller-manager while running Kubernetes.
+cloud-controller-managerはクラウドベンダーのコードとKubernetesコアを互いに独立して進化させることを可能にします。以前のリリースでは、コアKubernetesコードはクラウドプロバイダ固有の機能コードに依存していました。将来のリリースでは、クラウドベンダー特有のコードはクラウドベンダー自身によって管理され、cloud-controller-managerにリンクして使用します。
 
-The following controllers have cloud provider dependencies:
+次のコントローラはクラウドプロバイダに依存しています:
 
-  * Node Controller: For checking the cloud provider to determine if a node has been deleted in the cloud after it stops responding
-  * Route Controller: For setting up routes in the underlying cloud infrastructure
-  * Service Controller: For creating, updating and deleting cloud provider load balancers
-  * Volume Controller: For creating, attaching, and mounting volumes, and interacting with the cloud provider to orchestrate volumes
+  * Node Controller: ノードが停止した後、クラウド上でノードが削除されたかどうかを調べるため
+  * Route Controller: 基盤クラウドインフラ上でのルーティングを設定するため
+  * Service Controller: クラウドプロバイダのロードバランサを作成、更新、削除するため
+  * Volume Controller: ボリュームを作成、接続、マウントしたり、クラウドプロバイダと対話してボリュームを構成するため
 
 ## Nodeコンポーネント
 
