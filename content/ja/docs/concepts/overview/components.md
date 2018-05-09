@@ -66,41 +66,36 @@ Nodeコンポーネントはすべてのノードで動作し、podの実行とK
 
 ### kube-proxy
 
-[kube-proxy](/docs/admin/kube-proxy/) enables the Kubernetes service abstraction by maintaining
-network rules on the host and performing connection forwarding.
+[kube-proxy](/docs/admin/kube-proxy/)はホストのネットワークルールを管理したり、接続転送を実行することでKubernetesサービスの抽象化を可能にします。
 
-### Container Runtime
+### コンテナランタイム
 
-The container runtime is the software that is responsible for running containers. Kubernetes supports several runtimes: [Docker](http://www.docker.com), [rkt](https://coreos.com/rkt/), [runc](https://github.com/opencontainers/runc) and any OCI [runtime-spec](https://github.com/opencontainers/runtime-spec) implementation.
+コンテナランタイムはコンテナを実行する責務を負うソフトウェアです。Kubernetesは複数のランタイムをサポートしています: [Docker](http://www.docker.com)、[rkt](https://coreos.com/rkt/)、[runc](https://github.com/opencontainers/runc)及びOCI([runtime-spec](https://github.com/opencontainers/runtime-spec))を実装した任意のランタイム
 
-## Addons
+## アドオン
 
-Addons are pods and services that implement cluster features. The pods may be managed
-by Deployments, ReplicationControllers, and so on. Namespaced addon objects are created in
-the `kube-system` namespace.
+アドオンはクラスタの機能を実装するpodやserviceです。そのpodはdeploymentやreplicationController等によって管理されます。名前空間を区切られたアドオンは`kube-system`という名前空間に作成されます。
 
-Selected addons are described below, for an extended list of available addons please see [Addons](/docs/concepts/cluster-administration/addons/).
+いくつかのアドオンは以下に説明しています。有効なアドオンの一覧は[Addons](/docs/concepts/cluster-administration/addons/)ページを見てください。
 
 ### DNS
 
-While the other addons are not strictly required, all Kubernetes clusters should have [cluster DNS](/docs/concepts/services-networking/dns-pod-service/), as many examples rely on it.
+その他のアドオンは厳密に必須とはされていませんが、すべてのKubernetesクラスタは[cluster DNS](/docs/concepts/services-networking/dns-pod-service/)を持っているべきです。
 
-Cluster DNS is a DNS server, in addition to the other DNS server(s) in your environment, which serves DNS records for Kubernetes services.
+Cluster DNSはDNSサーバで、他のDNSサーバに加え、KubernetesのserviceのDNSレコードを返します。
 
-Containers started by Kubernetes automatically include this DNS server in their DNS searches.
+Kubernetesで実行されたコンテナは自動的にこのDNSサーバに含まれます。
 
 ### Web UI (Dashboard)
 
-[Dashboard](/docs/tasks/access-application-cluster/web-ui-dashboard/) is a general purpose, web-based UI for Kubernetes clusters. It allows users to manage and troubleshoot applications running in the cluster, as well as the cluster itself.
+[Dashboard](/docs/tasks/access-application-cluster/web-ui-dashboard/)は汎用のKubernetesクラスタのWebUIです。クラスタ自身を含む、クラスタ上で動作しているアプリケーションを管理したりトラブルシューティングを行ったりするのに役立ちます。
 
 ### Container Resource Monitoring
 
-[Container Resource Monitoring](/docs/tasks/debug-application-cluster/resource-usage-monitoring/) records generic time-series metrics
-about containers in a central database, and provides a UI for browsing that data.
+[Container Resource Monitoring](/docs/tasks/debug-application-cluster/resource-usage-monitoring/)はコンテナについての時系列メトリクスを中央DBに格納し、それらを閲覧するためのUIを提供します。
 
 ### Cluster-level Logging
 
-A [Cluster-level logging](/docs/concepts/cluster-administration/logging/) mechanism is responsible for
-saving container logs to a central log store with search/browsing interface.
+[Cluster-level logging](/docs/concepts/cluster-administration/logging/)はコンテナのログを中央ログストアに保存し、検索・ブラウジングインターフェースを提供する機構です。
 
 {{% /capture %}}
