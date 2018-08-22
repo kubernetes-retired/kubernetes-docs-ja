@@ -8,6 +8,8 @@ reviewers:
 # auto-merge happen if a /lgtm exists, or vice versa, or they can do both
 # No need for approvers to also be listed as reviewers
 approvers:
+- chenopis
 - cstoku
 - nasa9084
 - tnir
+- zacharysarah
