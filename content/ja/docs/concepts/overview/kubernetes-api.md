@@ -12,7 +12,7 @@ API規約全体については[API conventions doc](https://git.k8s.io/community
 
 APIのエンドポイント、リソースタイプ、サンプルは[API Reference](/docs/reference)に記載されています。
 
-APIへのリモートアクセスについては、[access doc](/docs/admin/accessing-the-api)で議論されています。.
+APIへのリモートアクセスについては、[access doc](/docs/admin/accessing-the-api)で議論されています。
 
 Kubernetes APIはシステムの宣言的な設定スキーマも提供しています。[kubectl](/docs/reference/kubectl/overview)コマンドラインツールは、APIオブジェクトを作成、更新、削除、取得のために使用することができます。
 
@@ -54,7 +54,7 @@ GET /swagger-2.0.0.pb-v1 | GET /openapi/v2 **Accept**: application/com.github.pr
 GET /swagger-2.0.0.pb-v1.gz | GET /openapi/v2 **Accept**: application/com.github.proto-openapi.spec.v2@v1.0+protobuf **Accept-Encoding**: gzip
 
 
-Kubernetesはクラスタ内部のコミュニケーションで主に試用するために、Protbufベースのシリアライゼーションフォーマットを実装しています。これは[design proposal](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/api-machinery/protobuf.md)で文書化されており、各スキーマに対するIDLファイルはAPIオブジェクトを定義しているGoのパッケージ内にあります。
+Kubernetesはクラスタ内部のコミュニケーションで主に使用するために、Protobufベースのシリアライゼーションフォーマットを実装しています。これは[design proposal](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/api-machinery/protobuf.md)で文書化されており、各スキーマに対するIDLファイルはAPIオブジェクトを定義しているGoのパッケージ内にあります。
 
 ## API versioning
 

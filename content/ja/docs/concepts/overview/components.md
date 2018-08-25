@@ -7,7 +7,7 @@ weight: 20
 ---
 
 {{% capture overview %}}
-このドキュメントでは、動作するKubernetes clusterに必要なバイナリコンポーネントについて説明します。
+このドキュメントでは、動作するKubernetesクラスタに必要なバイナリコンポーネントについて説明します。
 {{% /capture %}}
 
 {{% capture body %}}

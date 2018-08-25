@@ -8,7 +8,7 @@ weight: 40
 
 ## 全体
 
-Kubernetesで作業をするためには、 *Kubernetes APIオブジェクト* を使用してクラスタの *状態* を記述します。どのようなアプリケーションやワークロードを動作させたいのか、どのようなコンテナイメージを使うのか、レプリカの数、どのようなネットワークやディスクリソースがあるのか、などです。通常は`kubectl`というコマンドラインインターフェースを使用し、Kubernetes APIでオブジェクトを作成することによって目的の状態を設定します。また、Kubernetes APIを直接し要すして目的の状態を設定、変更することも出来ます。
+Kubernetesで作業をするためには、 *Kubernetes APIオブジェクト* を使用してクラスタの *状態* を記述します。どのようなアプリケーションやワークロードを動作させたいのか、どのようなコンテナイメージを使うのか、レプリカの数、どのようなネットワークやディスクリソースがあるのか、などです。通常は`kubectl`というコマンドラインインターフェースを使用し、Kubernetes APIでオブジェクトを作成することによって目的の状態を設定します。また、Kubernetes APIを直接し要すして目的の状態を設定、変更することもできます。
 
 一度目的の状態を設定したら、*Kubernetes Control Plane*はクラスタの現在の状態を目的の状態に一致させるように動作します。そのようにすることで、Kubernetesはコンテナの開始や再起動、レプリカ数のスケールなどといった操作を自動で実行します。Kubernetes Control Planeは、クラスタ上で実行されている一連のプロセスで構成されています:
 
@@ -28,7 +28,7 @@ Kubernetesはシステムの状態を表現するため、デプロイされた�
 * [Volume](/docs/concepts/storage/volumes/)
 * [Namespace](/docs/concepts/overview/working-with-objects/namespaces/)
 
-加えて、Kubernetesはコントローラと呼ばれる、高度な抽象概念を持っています。コントーらは基本オブジェクトの上に構築され、追加の機能性や利便性を提供します。これらは、次のものを含みます:
+加えて、Kubernetesはコントローラと呼ばれる、高度な抽象概念を持っています。コントローラは基本オブジェクトの上に構築され、追加の機能性や利便性を提供します。これらは、次のものを含みます:
 
 * [ReplicaSet](/docs/concepts/workloads/controllers/replicaset/)
 * [Deployment](/docs/concepts/workloads/controllers/deployment/)
@@ -44,13 +44,13 @@ Kubernetes Masterやkubeletプロセスなどのような、Kubernetes Control P
 
 ### Kubernetes Master
 
-Kubernetes masterはクラスタの目的の状態を維持する責務を負います。 `kubectl`コマンドラインインターフェースを使うなどしてKubernetesと通信を行ったとき、あなたはクラスタのKubernetes masterと通信をしています。
+Kubernetes Masterはクラスタの目的の状態を維持する責務を負います。 `kubectl`コマンドラインインターフェースを使うなどしてKubernetesと通信を行ったとき、あなたはクラスタのKubernetes masterと通信をしています。
 
 > 「マスター」とは、クラスタの状態を管理するプロセスの集合を指します。通常、これらのプロセスはすべて、クラスタ内の単一ノード上で実行され、このノードそのもののこともマスターと呼びます。マスターは可用性と冗長性のために複製することも出来ます。
 
 ### Kubernetes Nodes
 
-クラスタのノードはアプリケーションやクラウドワークフローを実行するマシン(VMや物理マシンなど)です。Kubernetes masterはそれぞれのノードを制御します。つまり、あなたがノードと直接対話することはほとんどありません。
+クラスタのノードはアプリケーションやクラウドワークフローを実行するマシン(VMや物理マシンなど)です。Kubernetes Masterはそれぞれのノードを制御します。つまり、あなたがノードと直接対話することはほとんどありません。
 
 #### オブジェクトメタデータ
 
