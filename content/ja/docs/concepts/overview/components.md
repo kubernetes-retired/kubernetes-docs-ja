@@ -1,6 +1,4 @@
 ---
-reviewers:
-- lavalamp
 title: Kubernetesコンポーネント
 content_template: templates/concept
 weight: 20
