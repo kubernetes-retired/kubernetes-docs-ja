@@ -46,7 +46,7 @@ Masterコンポーネントはクラスタ内のいずれのマシンでも実�
 
 cloud-controller-managerはcloud-provider特有の制御ループのみ実行します。kube-controller-managerにおけるこれらの制御ループは無効化する必要があります。無効化するには、kube-controller-managerを起動する際に、`--cloud-provider`フラグを`external`に設定します。
 
-cloud-controller-managerはクラウドベンダーのコードとKubernetesコアを互いに独立して進化させることを可能にします。以前のリリースでは、コアKubernetesコードはクラウドプロバイダ固有の機能コードに依存していました。将来のリリースでは、クラウドベンダー特有のコードはクラウドベンダー自身によって管理され、cloud-controller-managerにリンクして使用します。
+cloud-controller-managerはクラウドベンダーのコードとKubernetesコアを互いに独立して開発・更新することを可能にします。以前のリリースでは、Kubernetes本体のコードがクラウドプロバイダ固有の機能コードに依存していました。将来のリリースでは、クラウドベンダー特有のコードはクラウドベンダー自身によって管理され、cloud-controller-managerにリンクして使用します。
 
 次のコントローラはクラウドプロバイダに依存しています:
 
