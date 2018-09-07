@@ -109,5 +109,9 @@ description = "Production-Grade Container Orchestration"
 languageName ="Chinese"
 weight = 2
 contentDir = "content/cn"
-
-
+[languages.ja]
+title = "Kubernetes"
+description = "Production-Grade Container Orchestration"
+languageName ="Japanese"
+weight = 3
+contentDir = "content/ja"
