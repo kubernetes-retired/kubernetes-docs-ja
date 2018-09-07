@@ -103,11 +103,17 @@ description = "Production-Grade Container Orchestration"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
-[languages.cn]
+#[languages.cn]
+#title = "Kubernetes"
+#description = "Production-Grade Container Orchestration"
+#languageName ="Chinese"
+#weight = 2
+#contentDir = "content/cn"
+[languages.jp]
 title = "Kubernetes"
 description = "Production-Grade Container Orchestration"
-languageName ="Chinese"
-weight = 2
-contentDir = "content/cn"
+languageName ="Japanese"
+weight = 3
+contentDir = "content/jp"
 
 
