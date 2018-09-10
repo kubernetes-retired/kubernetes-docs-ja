@@ -1,0 +1,164 @@
+---
+title: "プロダクション級コンテナ・オーケストレーション"
+abstract: "コンテナのデプロイ、スケール、管理を自動化"
+cid: home
+---
+
+{{< deprecationwarning >}}
+
+<!--  OCEAN NODES  -->
+<section id="oceanNodes">
+    <main>
+        <div class="image-wrapper"><img src="/images/flower.png"></div>
+        <div class="content">
+            <h3><a href="/jp/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a>は、コンテナ化したアプリケーションのデプロイ、スケール、管理を自動化するオープンソースのシステムです。</h3>
+            <p>Kubernetes はコンテナをグループ化し、管理と発見が簡単になるよう、アプリケーションを論理的な集まりに構成します。
+            Kubernetes の基礎を作り上げるのは、 <a href="http://queue.acm.org/detail.cfm?id=2898444">Google において 15 年にわたるプロダクション・ワークロードを動かしている経験</a> と、コミュニティからのアイディアおよび経験の最善の組み合わせが一体となったものです。</p>
+        </div>
+    </main>
+    <main>
+        <div class="image-wrapper"><img src="/images/scalable.png"></div>
+        <div class="content">
+            <h4>世界規模のスケール</h4>
+            <p>oogle が毎週 10 億ものコンテナを動かすのと同じ方式で設計しているため、Kubernetes は皆さんの運用チームを増員しなくてもスケールできます。</p>
+        </div>
+    </main>
+    <main>
+        <div class="image-wrapper"><img src="/images/blocks.png"></div>
+        <div class="content">
+            <h4>成長は継続</h4>
+            <p>ローカルにおけるテストやグローバルなエンタープライズにおいても、Kubernetes の複雑さが増す心配は不要であり、アプリケーションを一貫して簡単に供給し、皆さんと共に柔軟に成長します。</p>
+        </div>
+    </main>
+    <main>
+        <div class="image-wrapper"><img src="/images/suitcase.png"></div>
+        <div class="content">
+            <h4>あらゆる場所で動作</h4>
+            <p>Kubernetes はオープンソースであり、オンプレミス、ハイブリッド、あるいはパブリッククラウド基盤の利点を自由に得られるため、ワークロードを効率的かつ心配する必要なくどこでも移動可能にします。</p>
+        </div>
+    </main>
+</section>
+
+<section id="video">
+    <div class="light-text">
+        <h2>Kubernetes に 150 以上のマイクロサービスを移行する挑戦</h2>
+        <p>By Sarah Wells、運用と信頼性に関する技術ディレクター、フィナンシャルタイムズ</p>
+        <button id="desktopShowVideoButton" onclick="kub.showVideo()">動画を視聴</button>
+        <br>
+        <br>
+        <a href="https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2018/" button id= "desktopKCButton">2018年11月14日～15日 KubeCon in Shanghai に参加</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="https://events.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2018/" button id= "desktopKCButton">2018年12月11日～13日 KubeCon in Seattle に参加</a>
+  </div>
+  <button id="mobileShowVideoButton" onclick="kub.showVideo()"></button>
+</section>
+
+<section id="features">
+    <main>
+        <h3 class="center">Kubernetes 機能</h3>
+
+        <div class="feature-box">
+            <div>
+                <h4><a href="/docs/concepts/configuration/manage-compute-resources-container/">自動的に集約</a></h4>
+                <p>リソース要件と他の制限に基づき、可用性を犠牲にせず、コンテナを自動的に配置します。リソースの稼働率を高め、リソースを更に制限するために、クリティカルおよびベスト・エフォートなワーククロードを組み合わせます。</p>
+            </div>
+            <div>
+                <h4><a href="/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller">自己修復 （Self-healing）</a></h4>
+                <p>障害が起こればコンテナを再起動し、ノードが壊れればコンテナの再配置と再スケジュールをし、定義したヘルスチェックの応答がなければコンテナを停止し、クライアントに提供する準備が整わなければ広報(advertise)しません。</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <div>
+                <h4><a href="/docs/tasks/run-application/horizontal-pod-autoscale/">水平スケール</a></h4>
+                <p>簡単なコマンドか UI あるいは CPU 使用率に基づき、アプリケーションを自動的にスケールアップ・ダウンします。</p>
+            </div>
+            <div>
+                <h4><a href="/docs/concepts/services-networking/service/">サービス・ディスカバリと負荷分散</a></h4>
+                <p>サービス・ディスカバリ機構になれていなくても、アプリケーションに手を加えることなく利用できる。Kubernetes はコンテナに対して IP アドレスとコンテナ群に対する１つの DNS 名をあたえ、相互に負荷分散できるようにします。</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <div>
+                <h4><a href="/docs/concepts/workloads/controllers/deployment/#what-is-a-deployment">自動的なロールアウトとロールバック</a></h4>
+                <p>Kubernetes はアプリケーションの正常性を確保したまま、全てのインスタンスを停止せず、アプリケーションや設定に対する変更を徐々に適用する。もし何か問題が起これば、Kubernetes は変更に対してロールバックすします</p>
+            </div>
+            <div>
+                <h4><a href="/docs/concepts/configuration/secret/">シークレット</a> と <a href="/docs/tasks/configure-pod-container/configure-pod-configmap/">設定</a> の管理</h4>
+                <p>シークレットとアプリケーション設定の展開と更新には、イメージの再構築やスタック設定内でシークレットを露出しない。</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <div>
+                <h4><a href="/docs/concepts/storage/persistent-volumes/">ストレージ・オーケストレーション</a></h4>
+                <p>ローカル・ストレージや <a href="https://cloud.google.com/storage/">GCP</a> や <a href="https://aws.amazon.com/products/storage/">AWS</a>どのパブリック・クラウド・プロバイダ、あるいは NFS や iSCSI、Gluster、Ceph、Cinder、Flocker のような、選択に応じたストレージ・システムを自動的にマウントします。</p>
+            </div>
+            <div>
+                <h4><a href="/docs/concepts/workloads/controllers/jobs-run-to-completion/">バッチ実行</a></h4>
+                <p>サービスだけでなく、Kubernetes はバッチや CI ワークロードなども管理でき、必要があれば障害時にコンテナを置き換えられます。</p>
+            </div>
+        </div>
+
+    </main>
+</section>
+
+<section id="talkToUs">
+    <main>
+        <h3>事例</h3>
+        <div id="caseStudiesWrapper">
+            <div>
+                <p>Kubernetes を使い世界最大の教育会社を再発明</p>
+                <a href="/case-studies/pearson/">もっと読む</a>
+            </div>
+            <div>
+                <p>box における Kubernetes：加速度を最大化するマイクロサービス</p>
+                <a href="https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/">もっと読む</a>
+            </div>
+            <div>
+                <p>eBay の内部は OpenStack 上の Kubernetes とコンテナに移行</p>
+                <a href="https://www.nextplatform.com/2015/11/12/inside-ebays-shift-to-kubernetes-and-containers-atop-openstack/">もっと読む</a>
+            </div>
+            <div>
+                <p>時前の「クラスタ」から Kubernetes への移行</p>
+                <a href="https://www.youtube.com/watch?v=6XGUTu3WhBw">動画を視聴</a>
+            </div>
+        </div>
+
+        <!--<div id="bigSocial">-->
+            <!--&lt;!&ndash;<div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="https://youtu.be/OLwzSHBtxhI">Watch the video</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p>Creating Next Generation Kubernetes Infrastructure at Viacom</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div>-->
+                <!--<p>Using Kubernetes to reinvent the world's largest educational company</p>-->
+                <!--<a href="/case-studies/pearson/">Read more</a>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<p>Kubernetes at Box: Microservices at Maximum Velocity</p>-->
+                <!--<a href="https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/">Read more</a>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<p>Inside eBay's shift to Kubernetes and containers atop OpenStack</p>-->
+                <!--<a href="http://www.nextplatform.com/2015/11/12/inside-ebays-shift-to-kubernetes-and-containers-atop-openstack/">Read the story</a>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<p>Migrating from a homegrown 'cluster' to Kubernetes</p>-->
+                <!--<a href="https://www.youtube.com/watch?v=6XGUTu3WhBw">Watch the video</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <h5 style="text-align: center"><a href="/case-studies/" style="color: #3371E3; font-weight: 400">すべての事例を表示</a></h5>
+    </main>
+</section>
+
+
+
+
+<div id="videoPlayer">
+    <iframe data-url="https://www.youtube.com/embed/H06qrNmGqyE?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <button id="closeButton"></button>
+</div>
