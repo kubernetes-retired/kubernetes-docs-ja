@@ -110,51 +110,6 @@ weight: 30
 [ContainerState（コンテナ状態）](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#containerstatus-v1-core)
 に依存しますのでご注意ください。
 
-<!--
-## ポッド待機ゲート（Pod readiness gate）{#pod-readiness-gate}
-
-{{< feature-state for_k8s_version="v1.11" state="alpha" >}}
-
-ポッドに対して拡張性を付与するため、外部のフィードバックまたはシグナルを `PodStatus` （ポッド状態）に投入できる機能、Kubernetes 1.11 では [Pod ready++](https://github.com/kubernetes/community/blob/master/keps/sig-network/0007-pod-ready%2B%2B.md) という名称で機能が導入されました。
-`PodSpec` 内で新しいフィールド `ReadinessGate` （待機ゲート）を利用して、追加の状況（condition）を指定すると、ポッドの準備中に評価できるようになります。
-もしも Kubernetes がポッドの `status.condition` フィールド内に対象の状況（condition）がなければ、状態のデフォルトは "`False`" です。以下が例になります：
-
-
-```yaml
-Kind: Pod
-...
-spec:
-  readinessGates:
-    - conditionType: "www.example.com/feature-1"
-status:
-  conditions:
-    - type: Ready  # こちらの初期の PodCondition
-      status: "True"
-      lastProbeTime: null
-      lastTransitionTime: 2018-01-01T00:00:00Z
-    - type: "www.example.com/feature-1"   # こちらは追加した PodCondition
-      status: "False"
-      lastProbeTIme: null
-      lastTransitionTime: 2018-01-01T00:00:00Z
-  containerStatuses:
-    - containerID: docker://abcd...
-      ready: true
-...
-```
-
-新しいポッド状態の指定は Kubernetel [ラベル・キー書式](/jp/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)に従う必要があります。
-`kubectl patch` コマンドはオブジェクト状態に対するパッチをまだサポートしていないため、新しい Pod 状態を設定するには、[KubeClient ライブラリ](/jp/docs/reference/using-api/client-librarie/) の１つを使い `PATCH` アクションを投入する必要があります。
-
-新しいポッド状態を導入するには、ポッドが以下両方の状態が真（True）の時 **のみ** 評価します：
-
-* ポッド内のコンテナ全てが準備完了
-* 全ての `ReadinessGate`（待機中ゲート）状態 が `True` に指定
-
-ポッドに対する読込性評価を調整するために、新しいポッド状態 `ContainersReady` を古いポッド状態 `Ready` から取得します。
-
-"Pod Ready++" はアルファ機能のため、利用するには `PodReadinessGates` [待機ゲート](/jp/docs/reference/command-line-tools-reference/feature-gates/) 機能を `True` に設定する必要があります。
--->
-
 ## 再起動方針 {#restart-policy}
 
 PodSpec にある `restartPolicy` （再起動方針）フィールドの値に入るのは、Always （常に再起動）か OnFailure （障害時に再起動）か Never （再起動しない）です。
