@@ -11,9 +11,6 @@ StatefulSet はステートフルなアプリケーションを管理するた�
 **メモ：** StatefulSets はバージョン 1.9 から安定版（GA）です。
 {{< /note >}}
 
-<!--
-{{< glossary_definition term_id="statefulset" length="all" >}}
--->
 ポッド（Pod） の集まりの展開（デプロイ）と拡大縮小（スケーリング）を管理し、 かつ、順序づけ（ordering）と一意性（uniqueness）の保証 をポッドに対して行います。
 
 Deployment（デプロイメント） のように、StatefulSet は同一のコンテナ spec をベースにしているポッドを管理します。Deployment と違うのは、StatefulSet は各ポッドの厄介な自己同一性を管理します。ポッドは同じ spec から作成されていますが、お互いを交換できません。つまり、それぞれのポッドは再スケジューリングの間でも一貫した識別子を持ちます。
